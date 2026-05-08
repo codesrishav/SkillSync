@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  --color-brand-50: #f0f5ff;
+  --color-brand-100: #e5edff;
+  --color-brand-200: #cddbfe;
+  --color-brand-300: #b4c6fc;
+  --color-brand-400: #8da2fb;
+  --color-brand-500: #6875f5;
+  --color-brand-600: #5850ec;
+  --color-brand-700: #5145cd;
+  --color-brand-800: #42389d;
+  --color-brand-900: #362f78;
+  
+  --color-accent-light: #fdf4ff;
+  --color-accent: #d946ef;
+  --color-accent-dark: #a21caf;
+  
+  --animate-blob: blob 7s infinite;
+  --animate-fade-in-up: fadeInUp 0.5s ease-out;
+  
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-[#fafafa] text-gray-900;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-2xl;
+  }
+  
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-lg border border-white/40 shadow-sm rounded-2xl;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-accent;
+  }
+  
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-white transition-all duration-300 bg-gradient-to-r from-brand-600 to-brand-500 rounded-xl hover:from-brand-500 hover:to-brand-400 hover:shadow-lg hover:shadow-brand-500/30 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 overflow-hidden;
+  }
+  
+  .btn-secondary {
+    @apply relative inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-brand-700 transition-all duration-300 bg-brand-50 rounded-xl hover:bg-brand-100 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 border border-brand-100;
+  }
+  
+  .input-field {
+    @apply block w-full rounded-xl border-gray-200 bg-white/50 backdrop-blur-sm px-4 py-3.5 text-gray-900 transition-all focus:border-brand-500 focus:bg-white focus:ring-brand-500 sm:text-sm shadow-sm;
+  }
+}
+
+/* Custom animated background pattern */
+.bg-mesh {
+  background-color: #fafafa;
+  background-image: 
+    radial-gradient(at 40% 20%, hsla(250,100%,94%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(289,100%,96%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(220,100%,95%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340,100%,96%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22,100%,95%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(240,100%,94%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343,100%,96%,1) 0px, transparent 50%);
+  background-attachment: fixed;
+}
