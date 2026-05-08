@@ -1,52 +1,91 @@
-# AI-Based Job Skill Gap Analyzer
+# 🚀 AI-Based Job Skill Gap Analyzer
 
-A full-stack web application built with the MERN stack and Google's Gemini API.
+<p align="center">
+  <img src="./screenshots/landing.png" alt="SkillSync Landing Page" width="100%" />
+</p>
 
-## Features
-- User authentication (JWT)
-- Upload resume (PDF) or paste skills manually
-- AI-powered skill extraction and gap analysis using Gemini
-- Learning roadmap generation and project suggestions
-- View past analysis history
+<p align="center">
+  <b>AI-powered MERN application that analyzes resumes, detects skill gaps, and generates personalized career roadmaps using Gemini API.</b>
+</p>
 
-## Prerequisites
+<p align="center">
+  ⚡ MERN Stack • 🤖 Gemini AI • 📊 Skill Analysis • 🧭 Career Roadmaps
+</p>
+
+---
+
+## ✨ Overview
+
+**SkillSync** is a full-stack AI career intelligence platform that helps users understand their skill level compared to industry job roles.
+
+It analyzes resumes using AI and provides:
+- Missing skills
+- Skill gap percentage
+- Learning roadmap
+- Project suggestions
+
+---
+
+## 🚀 Features
+
+- 🔐 Secure authentication (JWT)
+- 📄 Resume upload (PDF + manual input)
+- 🤖 AI-powered analysis using Gemini API
+- 📊 Skill gap detection system
+- 🧭 Personalized learning roadmap
+- 💡 Real-world project recommendations
+- 🕓 User analysis history dashboard
+- 📱 Fully responsive UI (mobile + desktop)
+
+---
+
+## 🧠 AI Engine
+
+SkillSync uses **Google Gemini AI** to:
+- Extract skills from resumes
+- Match against job roles
+- Identify missing skills
+- Generate structured career roadmap
+- Suggest improvement projects
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+- React.js
+- Tailwind CSS
+- Context API
+
+**Backend**
 - Node.js
-- MongoDB (running locally or MongoDB Atlas)
-- Gemini API Key
+- Express.js
+- MongoDB
+- JWT Authentication
 
-## Setup Instructions
+**AI Integration**
+- Google Gemini API
 
-### 1. Backend Setup
-1. Open a terminal and navigate to the `server` directory:
-   ```bash
-   cd server
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Update the `server/.env` file with your credentials (add your actual Gemini API Key).
-4. Start the server:
-   ```bash
-   node server.js
-   ```
+**Tools**
+- Vercel
+- Render / Railway
+- Git & GitHub
 
-### 2. Frontend Setup
-1. Open a new terminal and navigate to the `client` directory:
-   ```bash
-   cd client
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
+---
 
-## Usage
-1. Open `http://localhost:5173` in your browser.
-2. Sign up or log in.
-3. On the Dashboard, select a job role and either upload your resume PDF or paste your skills.
-4. Click "Analyze Skill Gap" to view your results.
+## 📁 Project Structure
+
+```bash id="w8m2qv"
+SkillSync/
+│
+├── client/        # React Frontend
+│   ├── src/
+│   ├── pages/
+│   ├── components/
+│
+├── server/        # Node Backend
+│   ├── routes/
+│   ├── controllers/
+│   ├── models/
+│
+└── README.md
